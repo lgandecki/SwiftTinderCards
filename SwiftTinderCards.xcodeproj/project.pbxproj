@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF143F601AC09EFE0041D95D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF143F5F1AC09EFE0041D95D /* AppDelegate.swift */; };
+		FF143F621AC09EFE0041D95D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF143F611AC09EFE0041D95D /* ViewController.swift */; };
+		FF143F651AC09EFE0041D95D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF143F631AC09EFE0041D95D /* Main.storyboard */; };
+		FF143F671AC09EFE0041D95D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF143F661AC09EFE0041D95D /* Images.xcassets */; };
+		FF143F6A1AC09EFE0041D95D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF143F681AC09EFE0041D95D /* LaunchScreen.xib */; };
+		FF143F761AC09EFE0041D95D /* SwiftTinderCardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF143F751AC09EFE0041D95D /* SwiftTinderCardsTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF143F701AC09EFE0041D95D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF143F521AC09EFE0041D95D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF143F591AC09EFE0041D95D;
+			remoteInfo = SwiftTinderCards;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF143F5A1AC09EFE0041D95D /* SwiftTinderCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTinderCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF143F5E1AC09EFE0041D95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF143F5F1AC09EFE0041D95D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF143F611AC09EFE0041D95D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF143F641AC09EFE0041D95D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF143F661AC09EFE0041D95D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FF143F691AC09EFE0041D95D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FF143F6F1AC09EFE0041D95D /* SwiftTinderCardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTinderCardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF143F741AC09EFE0041D95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF143F751AC09EFE0041D95D /* SwiftTinderCardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTinderCardsTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF143F571AC09EFE0041D95D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF143F6C1AC09EFE0041D95D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF143F511AC09EFE0041D95D = {
+			isa = PBXGroup;
+			children = (
+				FF143F5C1AC09EFE0041D95D /* SwiftTinderCards */,
+				FF143F721AC09EFE0041D95D /* SwiftTinderCardsTests */,
+				FF143F5B1AC09EFE0041D95D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF143F5B1AC09EFE0041D95D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF143F5A1AC09EFE0041D95D /* SwiftTinderCards.app */,
+				FF143F6F1AC09EFE0041D95D /* SwiftTinderCardsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF143F5C1AC09EFE0041D95D /* SwiftTinderCards */ = {
+			isa = PBXGroup;
+			children = (
+				FF143F5F1AC09EFE0041D95D /* AppDelegate.swift */,
+				FF143F611AC09EFE0041D95D /* ViewController.swift */,
+				FF143F631AC09EFE0041D95D /* Main.storyboard */,
+				FF143F661AC09EFE0041D95D /* Images.xcassets */,
+				FF143F681AC09EFE0041D95D /* LaunchScreen.xib */,
+				FF143F5D1AC09EFE0041D95D /* Supporting Files */,
+			);
+			path = SwiftTinderCards;
+			sourceTree = "<group>";
+		};
+		FF143F5D1AC09EFE0041D95D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF143F5E1AC09EFE0041D95D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF143F721AC09EFE0041D95D /* SwiftTinderCardsTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF143F751AC09EFE0041D95D /* SwiftTinderCardsTests.swift */,
+				FF143F731AC09EFE0041D95D /* Supporting Files */,
+			);
+			path = SwiftTinderCardsTests;
+			sourceTree = "<group>";
+		};
+		FF143F731AC09EFE0041D95D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF143F741AC09EFE0041D95D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF143F591AC09EFE0041D95D /* SwiftTinderCards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF143F791AC09EFE0041D95D /* Build configuration list for PBXNativeTarget "SwiftTinderCards" */;
+			buildPhases = (
+				FF143F561AC09EFE0041D95D /* Sources */,
+				FF143F571AC09EFE0041D95D /* Frameworks */,
+				FF143F581AC09EFE0041D95D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftTinderCards;
+			productName = SwiftTinderCards;
+			productReference = FF143F5A1AC09EFE0041D95D /* SwiftTinderCards.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF143F6E1AC09EFE0041D95D /* SwiftTinderCardsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF143F7C1AC09EFE0041D95D /* Build configuration list for PBXNativeTarget "SwiftTinderCardsTests" */;
+			buildPhases = (
+				FF143F6B1AC09EFE0041D95D /* Sources */,
+				FF143F6C1AC09EFE0041D95D /* Frameworks */,
+				FF143F6D1AC09EFE0041D95D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF143F711AC09EFE0041D95D /* PBXTargetDependency */,
+			);
+			name = SwiftTinderCardsTests;
+			productName = SwiftTinderCardsTests;
+			productReference = FF143F6F1AC09EFE0041D95D /* SwiftTinderCardsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF143F521AC09EFE0041D95D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Lukasz Gandecki";
+				TargetAttributes = {
+					FF143F591AC09EFE0041D95D = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					FF143F6E1AC09EFE0041D95D = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = FF143F591AC09EFE0041D95D;
+					};
+				};
+			};
+			buildConfigurationList = FF143F551AC09EFE0041D95D /* Build configuration list for PBXProject "SwiftTinderCards" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF143F511AC09EFE0041D95D;
+			productRefGroup = FF143F5B1AC09EFE0041D95D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF143F591AC09EFE0041D95D /* SwiftTinderCards */,
+				FF143F6E1AC09EFE0041D95D /* SwiftTinderCardsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF143F581AC09EFE0041D95D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF143F651AC09EFE0041D95D /* Main.storyboard in Resources */,
+				FF143F6A1AC09EFE0041D95D /* LaunchScreen.xib in Resources */,
+				FF143F671AC09EFE0041D95D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF143F6D1AC09EFE0041D95D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF143F561AC09EFE0041D95D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF143F621AC09EFE0041D95D /* ViewController.swift in Sources */,
+				FF143F601AC09EFE0041D95D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF143F6B1AC09EFE0041D95D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF143F761AC09EFE0041D95D /* SwiftTinderCardsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF143F711AC09EFE0041D95D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF143F591AC09EFE0041D95D /* SwiftTinderCards */;
+			targetProxy = FF143F701AC09EFE0041D95D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF143F631AC09EFE0041D95D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF143F641AC09EFE0041D95D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF143F681AC09EFE0041D95D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF143F691AC09EFE0041D95D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF143F771AC09EFE0041D95D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF143F781AC09EFE0041D95D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF143F7A1AC09EFE0041D95D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SwiftTinderCards/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FF143F7B1AC09EFE0041D95D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SwiftTinderCards/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FF143F7D1AC09EFE0041D95D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftTinderCardsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftTinderCards.app/SwiftTinderCards";
+			};
+			name = Debug;
+		};
+		FF143F7E1AC09EFE0041D95D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftTinderCardsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftTinderCards.app/SwiftTinderCards";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF143F551AC09EFE0041D95D /* Build configuration list for PBXProject "SwiftTinderCards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF143F771AC09EFE0041D95D /* Debug */,
+				FF143F781AC09EFE0041D95D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF143F791AC09EFE0041D95D /* Build configuration list for PBXNativeTarget "SwiftTinderCards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF143F7A1AC09EFE0041D95D /* Debug */,
+				FF143F7B1AC09EFE0041D95D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FF143F7C1AC09EFE0041D95D /* Build configuration list for PBXNativeTarget "SwiftTinderCardsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF143F7D1AC09EFE0041D95D /* Debug */,
+				FF143F7E1AC09EFE0041D95D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF143F521AC09EFE0041D95D /* Project object */;
+}
