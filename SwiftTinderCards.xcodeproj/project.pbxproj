@@ -11,8 +11,9 @@
 		FF143F621AC09EFE0041D95D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF143F611AC09EFE0041D95D /* ViewController.swift */; };
 		FF143F651AC09EFE0041D95D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF143F631AC09EFE0041D95D /* Main.storyboard */; };
 		FF143F671AC09EFE0041D95D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF143F661AC09EFE0041D95D /* Images.xcassets */; };
-		FF143F6A1AC09EFE0041D95D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF143F681AC09EFE0041D95D /* LaunchScreen.xib */; };
 		FF143F761AC09EFE0041D95D /* SwiftTinderCardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF143F751AC09EFE0041D95D /* SwiftTinderCardsTests.swift */; };
+		FF143F801AC0A8760041D95D /* DraggableViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF143F7F1AC0A8760041D95D /* DraggableViewBackground.swift */; };
+		FF143F821AC0A8850041D95D /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF143F811AC0A8850041D95D /* DraggableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,10 +33,11 @@
 		FF143F611AC09EFE0041D95D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FF143F641AC09EFE0041D95D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF143F661AC09EFE0041D95D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FF143F691AC09EFE0041D95D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FF143F6F1AC09EFE0041D95D /* SwiftTinderCardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTinderCardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF143F741AC09EFE0041D95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF143F751AC09EFE0041D95D /* SwiftTinderCardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTinderCardsTests.swift; sourceTree = "<group>"; };
+		FF143F7F1AC0A8760041D95D /* DraggableViewBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableViewBackground.swift; sourceTree = "<group>"; };
+		FF143F811AC0A8850041D95D /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +83,9 @@
 				FF143F611AC09EFE0041D95D /* ViewController.swift */,
 				FF143F631AC09EFE0041D95D /* Main.storyboard */,
 				FF143F661AC09EFE0041D95D /* Images.xcassets */,
-				FF143F681AC09EFE0041D95D /* LaunchScreen.xib */,
 				FF143F5D1AC09EFE0041D95D /* Supporting Files */,
+				FF143F7F1AC0A8760041D95D /* DraggableViewBackground.swift */,
+				FF143F811AC0A8850041D95D /* DraggableView.swift */,
 			);
 			path = SwiftTinderCards;
 			sourceTree = "<group>";
@@ -193,7 +196,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF143F651AC09EFE0041D95D /* Main.storyboard in Resources */,
-				FF143F6A1AC09EFE0041D95D /* LaunchScreen.xib in Resources */,
 				FF143F671AC09EFE0041D95D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF143F801AC0A8760041D95D /* DraggableViewBackground.swift in Sources */,
 				FF143F621AC09EFE0041D95D /* ViewController.swift in Sources */,
+				FF143F821AC0A8850041D95D /* DraggableView.swift in Sources */,
 				FF143F601AC09EFE0041D95D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,14 +246,6 @@
 				FF143F641AC09EFE0041D95D /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FF143F681AC09EFE0041D95D /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FF143F691AC09EFE0041D95D /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
