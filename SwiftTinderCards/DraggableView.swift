@@ -9,9 +9,25 @@
 import Foundation
 import UIKit
 
+let ACTION_MARGIN = CGFloat(120) //%%% distance from center where the action applies. Higher = swipe further in order for the action to be called
+let SCALE_STRENGTH = CGFloat(4) //%%% how quickly the card shrinks. Higher = slower shrinking
+let SCALE_MAX = CGFloat(0.93) //%%% upper bar for how much the card shrinks. Higher = shrinks less
+let ROTATION_MAX = CGFloat(1) //%%% the maximum rotation allowed in radians.  Higher = card can keep rotating longer
+let ROTATION_STRENGTH = CGFloat(320) //%%% strength of rotation. Higher = weaker rotation
+let ROTATION_ANGLE = CGFloat(M_PI/8) //%%% Higher = stronger rotation angle
+
+
 class DraggableView:UIView{
     var delegate:DraggableViewDelegate?
-    var information:UILabel = UILabel()
+    
+    var xFromCenter = CGFloat()
+    var yFromCenter = CGFloat()
+    
+    var originalPoint = CGPoint()
+    
+    var information = UILabel()
+    
+    var panGestureRecognizer = UIPanGestureRecognizer()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,13 +35,14 @@ class DraggableView:UIView{
     convenience init(frame: CGRect, information: String) {
         self.init(frame: frame)
         setupView()
-//        addGestureRecognizer()
+        addGestureRecognizer()
         setInformation(information)
     }
 
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
     func setupView() {
         self.layer.cornerRadius = 4;
         self.layer.shadowRadius = 3;
@@ -34,6 +51,106 @@ class DraggableView:UIView{
         self.backgroundColor = UIColor.whiteColor()
         
     }
+
+    func addGestureRecognizer() {
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "beingDragged:")
+        self.addGestureRecognizer(panGestureRecognizer)
+    }
+    
+    func beingDragged(gestureRecognizer: UIPanGestureRecognizer) {
+        xFromCenter = gestureRecognizer.translationInView(self).x;
+        yFromCenter = gestureRecognizer.translationInView(self).y;
+        
+        switch (gestureRecognizer.state) {
+            case .Began:
+                self.originalPoint = self.center;
+                break;
+            
+            
+            case .Changed:
+                //%%% dictates rotation (see ROTATION_MAX and ROTATION_STRENGTH for details)
+                var rotationStrength = min(xFromCenter / ROTATION_STRENGTH, ROTATION_MAX);
+                
+                //%%% degree change in radians
+                var rotationAngel = (ROTATION_ANGLE * rotationStrength);
+                
+                //%%% amount the height changes when you move the card up to a certain point
+                var scale = max(1 - fabs(rotationStrength) / SCALE_STRENGTH, SCALE_MAX);
+                
+                //%%% move the object's center by center + gesture coordinate
+                self.center = CGPointMake(self.originalPoint.x + xFromCenter, self.originalPoint.y + yFromCenter);
+                
+                //%%% rotate by certain amount
+                var transform = CGAffineTransformMakeRotation(rotationAngel);
+                
+                //%%% scale by certain amount
+                var scaleTransform = CGAffineTransformScale(transform, scale, scale);
+                
+                //%%% apply transformations
+                self.transform = scaleTransform;
+                
+                // self.updateOverlay(xFromCenter)
+                break;
+            case .Ended:
+                afterSwipeAction()
+            break;
+            default:
+            break;
+        }
+        
+    }
+    
+    func afterSwipeAction() {
+        if (xFromCenter > ACTION_MARGIN) {
+            rightAction();
+        } else if (xFromCenter < -ACTION_MARGIN){
+            leftAction();
+        } else {
+            animateCardBack()
+           
+        }
+    }
+    
+    func rightAction() {
+        animateCardToTheRight()
+        delegate?.cardSwipedLeft(self)
+    }
+    
+    func animateCardToTheRight() {
+        let rightEdge = CGFloat(500)
+        animateCardOutTo(rightEdge)
+    }
+    
+    func leftAction() {
+        animateCardToTheLeft()
+        delegate?.cardSwipedRight(self)
+    }
+    
+    func animateCardToTheLeft() {
+        let leftEdge = CGFloat(-500)
+        animateCardOutTo(leftEdge)
+    }
+    
+    func animateCardOutTo(edge: CGFloat) {
+        let finishPoint = CGPointMake(edge, 2*yFromCenter + self.originalPoint.y)
+        UIView.animateWithDuration(0.3, animations: {
+            self.center = finishPoint;
+            }, completion: {
+                (value: Bool) in
+                self.removeFromSuperview()
+        })
+        
+    }
+
+    
+    func animateCardBack() {
+        UIView.animateWithDuration(0.3, animations: {
+            self.center = self.originalPoint;
+            self.transform = CGAffineTransformMakeRotation(0);
+            //                overlayView.alpha = 0;
+            }
+        )
+    }
     func setInformation(information: String) {
         self.information.frame = CGRectMake(0, 50, self.frame.size.width, 100)
         self.information.textAlignment = .Center
@@ -41,6 +158,8 @@ class DraggableView:UIView{
         self.information.textColor = UIColor.blackColor();
         self.addSubview(self.information)
     }
+    
+    
 }
 
 protocol DraggableViewDelegate {
