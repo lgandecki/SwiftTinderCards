@@ -14,6 +14,7 @@
 		FF143F761AC09EFE0041D95D /* SwiftTinderCardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF143F751AC09EFE0041D95D /* SwiftTinderCardsTests.swift */; };
 		FF143F801AC0A8760041D95D /* DraggableViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF143F7F1AC0A8760041D95D /* DraggableViewBackground.swift */; };
 		FF143F821AC0A8850041D95D /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF143F811AC0A8850041D95D /* DraggableView.swift */; };
+		FF143F841AC0D7D10041D95D /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF143F831AC0D7D10041D95D /* OverlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		FF143F751AC09EFE0041D95D /* SwiftTinderCardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTinderCardsTests.swift; sourceTree = "<group>"; };
 		FF143F7F1AC0A8760041D95D /* DraggableViewBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableViewBackground.swift; sourceTree = "<group>"; };
 		FF143F811AC0A8850041D95D /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
+		FF143F831AC0D7D10041D95D /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				FF143F5D1AC09EFE0041D95D /* Supporting Files */,
 				FF143F7F1AC0A8760041D95D /* DraggableViewBackground.swift */,
 				FF143F811AC0A8850041D95D /* DraggableView.swift */,
+				FF143F831AC0D7D10041D95D /* OverlayView.swift */,
 			);
 			path = SwiftTinderCards;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				FF143F621AC09EFE0041D95D /* ViewController.swift in Sources */,
 				FF143F821AC0A8850041D95D /* DraggableView.swift in Sources */,
 				FF143F601AC09EFE0041D95D /* AppDelegate.swift in Sources */,
+				FF143F841AC0D7D10041D95D /* OverlayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

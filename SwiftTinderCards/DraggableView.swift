@@ -29,12 +29,15 @@ class DraggableView:UIView{
     
     var panGestureRecognizer = UIPanGestureRecognizer()
     
+    var overlayView:OverlayView?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     convenience init(frame: CGRect, information: String) {
         self.init(frame: frame)
         setupView()
+        addOverlayView()
         addGestureRecognizer()
         setInformation(information)
     }
@@ -50,6 +53,12 @@ class DraggableView:UIView{
         self.layer.shadowOffset = CGSizeMake(1, 1);
         self.backgroundColor = UIColor.whiteColor()
         
+    }
+    
+    func addOverlayView() {
+        let overlayViewFrame = CGRectMake(self.frame.size.width/2-100, 0, 100, 100)
+        overlayView = OverlayView(frame: overlayViewFrame)
+        addSubview(overlayView!)
     }
 
     func addGestureRecognizer() {
@@ -89,7 +98,7 @@ class DraggableView:UIView{
                 //%%% apply transformations
                 self.transform = scaleTransform;
                 
-                // self.updateOverlay(xFromCenter)
+                 self.updateOverlay(xFromCenter)
                 break;
             case .Ended:
                 afterSwipeAction()
@@ -113,7 +122,7 @@ class DraggableView:UIView{
     
     func rightAction() {
         animateCardToTheRight()
-        delegate?.cardSwipedLeft(self)
+        delegate?.cardSwipedRight(self)
     }
     
     func animateCardToTheRight() {
@@ -123,7 +132,7 @@ class DraggableView:UIView{
     
     func leftAction() {
         animateCardToTheLeft()
-        delegate?.cardSwipedRight(self)
+        delegate?.cardSwipedLeft(self)
     }
     
     func animateCardToTheLeft() {
@@ -142,15 +151,31 @@ class DraggableView:UIView{
         
     }
 
-    
     func animateCardBack() {
         UIView.animateWithDuration(0.3, animations: {
             self.center = self.originalPoint;
             self.transform = CGAffineTransformMakeRotation(0);
-            //                overlayView.alpha = 0;
+                self.overlayView?.alpha = 0;
             }
         )
     }
+    
+    func updateOverlay(distance: CGFloat) {
+        if (distance > 0) {
+            overlayView?.setMode(.Right)
+        } else {
+            overlayView?.setMode(.Left)
+        }
+        overlayView?.alpha = min(fabs(distance)/100, 0.4)
+    }
+    func rightClickAction() {
+        rightAction()
+    }
+    
+    func leftClickAction() {
+        leftAction()
+    }
+    
     func setInformation(information: String) {
         self.information.frame = CGRectMake(0, 50, self.frame.size.width, 100)
         self.information.textAlignment = .Center

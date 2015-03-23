@@ -114,7 +114,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
         print ("Swiped left")
     }
     func cardSwipedRight(card: UIView) {
-        print ("siema")
+        print ("Swiped right")
     }
 
     
