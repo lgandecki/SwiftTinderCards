@@ -66,21 +66,24 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     func addXButton() {
         xButton.frame = CGRectMake(60, 485, 59, 59)
         xButton.setImage(UIImage(named: "xButton"), forState: .Normal)
+        xButton.addTarget(self, action: "swipeLeft", forControlEvents: .TouchUpInside)
         addSubview(xButton)
     }
     
     func addCheckButton() {
         checkButton.frame = CGRectMake(200, 485, 59, 59)
         checkButton.setImage(UIImage(named: "checkButton"), forState: .Normal)
+        checkButton.addTarget(self, action: "swipeRight",
+            forControlEvents: .TouchUpInside)
         addSubview(checkButton)
     }
     
     func setLoadedCardsCap() {
         numLoadedCardsCap = 0;
         if (exampleCardLabels.count > MAX_BUFFER_SIZE) {
-            numLoadedCardsCap = exampleCardLabels.count
-        } else {
             numLoadedCardsCap = MAX_BUFFER_SIZE
+        } else {
+            numLoadedCardsCap = exampleCardLabels.count
         }
         
     }
@@ -99,23 +102,58 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
 
     func displayCards() {
         for(var i = 0; i < numLoadedCardsCap; i++) {
-            loadedCards.addObject(allCards[i])
-            if (i > 0) {
-                insertSubview(loadedCards[i] as UIView, belowSubview: loadedCards[i-1] as UIView)
-                // is there a way to define the array with UIView elements so I don't have to cast?
-            } else {
-                addSubview(loadedCards[0] as UIView)
-            }
-            cardsLoadedIndex++;
+            loadACardAt(i)
         }
     }
     
-    func cardSwipedLeft(card: UIView) {
-        print ("Swiped left")
+    func cardSwipedLeft(card: DraggableView) {
+        processCardSwipe()
     }
-    func cardSwipedRight(card: UIView) {
-        print ("Swiped right")
+    
+    func cardSwipedRight(card: DraggableView) {
+        processCardSwipe()
     }
+
+    
+    func processCardSwipe() {
+        loadedCards.removeObjectAtIndex(0)
+        
+        if (moreCardsToLoad()) {
+            loadNextCard()
+        }
+    }
+    
+    func moreCardsToLoad() -> Bool {
+        return cardsLoadedIndex < allCards.count;
+    }
+    
+    func loadNextCard() {
+        loadACardAt(cardsLoadedIndex)
+    }
+    
+    func loadACardAt(index: Int) {
+        loadedCards.addObject(allCards[index])
+        if (loadedCards.count > 1) {
+            insertSubview(loadedCards[loadedCards.count-1] as DraggableView, belowSubview: loadedCards[loadedCards.count-2] as DraggableView)
+            // is there a way to define the array with UIView elements so I don't have to cast?
+        } else {
+            addSubview(loadedCards[0] as DraggableView)
+        }
+        cardsLoadedIndex++;
+    }
+    
+    func swipeRight() {
+        let dragView = loadedCards[0] as DraggableView
+        print ("Clicked right")
+        dragView.rightClickAction()
+    }
+    
+    func swipeLeft() {
+        let dragView = loadedCards[0] as DraggableView
+        print ("clicked left")
+        dragView.leftClickAction()
+    }
+    
 
     
 }

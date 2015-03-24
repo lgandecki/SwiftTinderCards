@@ -188,6 +188,6 @@ class DraggableView:UIView{
 }
 
 protocol DraggableViewDelegate {
-    func cardSwipedLeft(card: UIView)
-    func cardSwipedRight(card: UIView)
+    func cardSwipedLeft(card: DraggableView)
+    func cardSwipedRight(card: DraggableView)
 }
