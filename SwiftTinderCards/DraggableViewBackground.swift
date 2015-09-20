@@ -27,7 +27,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
     var cardsLoadedIndex = 0
     var numLoadedCardsCap = 0
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     override init(frame: CGRect) {
