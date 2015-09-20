@@ -162,6 +162,8 @@
 		FF143F521AC09EFE0041D95D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Lukasz Gandecki";
 				TargetAttributes = {
@@ -407,6 +409,7 @@
 				FF143F7B1AC09EFE0041D95D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF143F7C1AC09EFE0041D95D /* Build configuration list for PBXNativeTarget "SwiftTinderCardsTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +418,7 @@
 				FF143F7E1AC09EFE0041D95D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
