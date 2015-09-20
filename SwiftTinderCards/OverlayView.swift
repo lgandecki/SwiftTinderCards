@@ -26,7 +26,7 @@ class OverlayView:UIView {
         addImageView()
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -43,7 +43,7 @@ class OverlayView:UIView {
         imageView.frame = CGRectMake(50, 50, 100, 100)
 
     }
-    func setImageView(buttonString: String) {
+    func setMyImageView(buttonString: String) {
         imageView.image = UIImage(named: buttonString)
     }
     
@@ -56,10 +56,10 @@ class OverlayView:UIView {
         
         switch (mode) {
         case .Left:
-            setImageView("noButton")
+            setMyImageView("noButton")
             break;
         case .Right:
-            setImageView("yesButton")
+            setMyImageView("yesButton")
             break;
         case .None:
             break;

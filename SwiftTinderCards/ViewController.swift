@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var draggableViewBackground = DraggableViewBackground(frame: self.view.frame)
+        let draggableViewBackground = DraggableViewBackground(frame: self.view.frame)
         self.view.addSubview(draggableViewBackground);
         // Do any additional setup after loading the view, typically from a nib.
     }
