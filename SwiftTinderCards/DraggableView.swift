@@ -39,7 +39,7 @@ class DraggableView:UIView{
         setupView()
         addOverlayView()
         addGestureRecognizer()
-        setInformation(information)
+        setMyInformation(information)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -176,7 +176,7 @@ class DraggableView:UIView{
         leftAction()
     }
     
-    func setInformation(information: String) {
+    func setMyInformation(information: String) {
         self.information.frame = CGRectMake(0, 50, self.frame.size.width, 100)
         self.information.textAlignment = .Center
         self.information.text = information;
