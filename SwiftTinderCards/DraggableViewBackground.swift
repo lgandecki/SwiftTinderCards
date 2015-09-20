@@ -93,7 +93,7 @@ class DraggableViewBackground: UIView, DraggableViewDelegate {
             let cardFrame = CGRectMake((self.frame.size.width - CARD_WIDTH)/2, (self.frame.size.height - CARD_HEIGHT)/2, CARD_WIDTH, CARD_HEIGHT)
             
             for cardLabel in exampleCardLabels {
-                var newCard = DraggableView(frame: cardFrame, information: cardLabel)
+                let newCard = DraggableView(frame: cardFrame, information: cardLabel)
                 newCard.delegate = self;
                 allCards.addObject(newCard)
             }
